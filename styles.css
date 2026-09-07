@@ -1,6 +1,10 @@
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 
+  /* =========================
+RESET
+========================= */
+
   * {
       margin: 0;
       padding: 0;
@@ -8,12 +12,27 @@
       font-family: Arial, Helvetica, sans-serif;
   }
 
-  .banner {
+  /* =========================
+BODY
+========================= */
 
+  body {
+      background: #0a0a0a;
+      color: #fff;
+      background-image: url(./img/img.portifolio.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+  }
+
+  /* =========================
+BANNER
+========================= */
+
+  .banner {
       position: fixed;
       top: 70px;
       left: 50%;
-      transform: translatex(-50%);
+      transform: translateX(-50%);
       background: #7610d6;
       color: #fff;
       padding: 10px 16px;
@@ -26,7 +45,6 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
   }
 
-
   .banner p {
       margin: 0;
   }
@@ -34,25 +52,14 @@
   .banner-close {
       background: none;
       border: none;
+      color: #fff;
       font-size: 14px;
       cursor: pointer;
   }
 
-  body {
-      background: #0a0a0a;
-      color: #fff;
-      background-image: url(./img/img.portifolio.jpg);
-      background-size: cover;
-
-
-  }
-
-  .secao {
-      padding: 100px 0;
-      padding-left: 50px;
-
-  }
-
+  /* =========================
+HEADER
+========================= */
 
   header {
       display: flex;
@@ -64,20 +71,15 @@
       position: fixed;
       background: #000000;
       z-index: 1000;
-
-
   }
 
   ul {
       display: flex;
       gap: 50px;
       list-style: none;
-      color: #6a0dad;
-
   }
 
   ul a {
-
       color: #6a0dad;
       text-decoration: none;
       position: relative;
@@ -101,14 +103,23 @@
       width: 100%;
   }
 
+  /* =========================
+SEÇÕES
+========================= */
 
+  .secao {
+      padding: 100px 0 100px 50px;
+  }
+
+  /* =========================
+HOME
+========================= */
 
   .principal {
       display: flex;
       align-items: center;
       margin-left: 50px;
       min-height: 80vh;
-
   }
 
   .principal h1 {
@@ -116,40 +127,54 @@
       line-height: 1.1;
       margin-bottom: 20px;
       letter-spacing: -2px;
-
   }
 
   .principal h1 span {
       color: #6a0dad;
-      font-family: "Dancing Script";
-
+      font-family: "Dancing Script", cursive;
   }
 
+  .principal h2 {
+      font-size: 30px;
+      color: #fff;
+      margin-bottom: 20px;
+  }
 
   .principal p {
       font-size: 20px;
-      margin-bottom: 20px;
-      max-width: 500px;
-      color: #bbb;
       margin-bottom: 40px;
+      max-width: 600px;
+      color: #bbb;
+      line-height: 1.5;
   }
+
+  /* =========================
+BOTÃO CURRÍCULO
+========================= */
 
   .botao {
       display: inline-block;
-      font-weight: 700;
       padding: 15px 30px;
       background-color: #bbb;
       color: #6a0dad;
       font-weight: bold;
-      border-radius: 20px
+      border-radius: 20px;
+      text-decoration: none;
+      transition: 0.3s;
   }
 
-  .titulo-secao {
+  .botao:hover {
+      background-color: #fff;
+  }
 
+  /* =========================
+TÍTULOS DAS SEÇÕES
+========================= */
+
+  .titulo-secao {
       font-size: 42px;
       margin-bottom: 60px;
       position: relative;
-
   }
 
   .titulo-secao::after {
@@ -160,48 +185,107 @@
       width: 100px;
       height: 4px;
       background-color: #6a0dad;
-      ;
-
   }
 
-  .grade-projetos {
+  /* =========================
+PROJETOS
+========================= */
 
+  .grade-projetos {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
-      gap: 10px;
+      gap: 20px;
       align-items: stretch;
+      padding-right: 50px;
   }
 
   .card-projeto {
       background-color: #0a0a0a;
+      border: 1px solid #222;
       border-radius: 10px;
       overflow: hidden;
+      transition: 0.3s ease;
   }
 
+  .card-projeto:hover {
+      transform: translateY(-8px);
+      border-color: #6a0dad;
+      box-shadow: 0 5px 20px rgba(106, 13, 173, 0.3);
+  }
 
   .img-projeto {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      margin-bottom: 20px;
   }
 
   .info-projeto {
       padding: 20px;
-      color: #7610d6;
-      font-weight: 500;
-
   }
 
   .info-projeto h3 {
-      margin-bottom: 30px;
+      color: #7610d6;
+      margin-bottom: 20px;
   }
 
   .info-projeto p {
       color: #bbb;
-      margin-bottom: 15px;
-
+      margin-bottom: 20px;
+      line-height: 1.5;
   }
+
+  .info-projeto a {
+      color: #6a0dad;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+  }
+
+  .info-projeto a:hover {
+      color: #a64de8;
+  }
+
+  /* =========================
+ATUALMENTE ESTUDANDO
+========================= */
+
+  .estudos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1000px;
+      padding-right: 50px;
+  }
+
+  .card-estudo {
+      background-color: #0a0a0a;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 30px;
+      transition: 0.3s ease;
+  }
+
+  .card-estudo:hover {
+      transform: translateY(-8px);
+      border-color: #6a0dad;
+      box-shadow: 0 5px 20px rgba(106, 13, 173, 0.3);
+  }
+
+  .card-estudo h3 {
+      color: #6a0dad;
+      font-size: 24px;
+      margin-bottom: 15px;
+  }
+
+  .card-estudo p {
+      color: #bbb;
+      line-height: 1.6;
+      font-size: 16px;
+  }
+
+  /* =========================
+SOBRE MIM
+========================= */
 
   .sobre {
       display: grid;
@@ -209,11 +293,12 @@
       gap: 50px;
       align-items: center;
       max-width: 1000px;
-
   }
 
   .img-sobre {
+      width: 100%;
       height: 500px;
+      object-fit: cover;
       background-color: #0a0a0a;
       border-radius: 100px;
   }
@@ -225,7 +310,12 @@
   .conteudo-sobre p {
       margin-bottom: 20px;
       color: #bbb;
+      line-height: 1.6;
   }
+
+  /* =========================
+HABILIDADES
+========================= */
 
   .habilidades {
       display: flex;
@@ -235,25 +325,26 @@
 
   .tag-habilidades {
       background-color: #6a0dad;
-      ;
-      color: #bbb;
+      color: #fff;
       padding: 8px 15px;
       border-radius: 20px;
       margin-right: 10px;
       margin-bottom: 10px;
       font-size: 14px;
-
   }
+
+  /* =========================
+CONTATO
+========================= */
 
   .botoes-contato {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      align-items: center;
       justify-content: center;
-      align-items: center;
       max-width: 800px;
       margin: 0 auto;
+      padding-right: 50px;
   }
 
   .botao-contato {
@@ -266,15 +357,22 @@
       min-width: 160px;
       text-decoration: none;
       color: white;
+      transition: 0.3s;
+  }
 
+  .botao-contato:hover {
+      transform: translateY(-5px);
   }
 
   .botao-contato .icone {
       width: 20px;
       height: 20px;
       flex-shrink: 0;
-
   }
+
+  /* =========================
+CORES DOS BOTÕES
+========================= */
 
   .whatsapp {
       background-color: #25d366;
@@ -292,6 +390,9 @@
       background-color: #0077b5;
   }
 
+  /* =========================
+FOOTER
+========================= */
 
   footer {
       padding: 20px 5%;
@@ -299,58 +400,131 @@
       border-top: 1px solid #222;
   }
 
+  /* =========================
+EFEITO DOS BOTÕES
+========================= */
+
   .efeito-cursor {
       cursor: pointer;
       transition: transform 0.2s ease-in-out;
-
   }
 
   .efeito-cursor:hover {
-      transform: translateY(-15px);
+      transform: translateY(-8px);
   }
+
+  /* =========================
+IMAGENS
+========================= */
 
   img {
       max-width: 100%;
-      height: auto;
-
   }
+
+  /* =========================
+RESPONSIVIDADE
+========================= */
 
   @media (max-width: 768px) {
 
+
+      /* Header */
+
       header {
           padding: 20px;
-          margin-left: 2px;
-
+          height: auto;
       }
 
       ul {
-          gap: 10px;
-
+          gap: 15px;
       }
 
-      .li a {
+      ul a {
           font-size: 15px;
-
       }
+
+
+      /* Home */
 
       .principal {
           margin-left: 20px;
+          margin-right: 20px;
+          min-height: 80vh;
       }
 
       .principal h1 {
           font-size: 50px;
       }
 
+      .principal h2 {
+          font-size: 24px;
+      }
+
+      .principal p {
+          font-size: 17px;
+      }
+
+
+      /* Seções */
+
       .secao {
           padding: 60px 20px;
       }
 
+      .titulo-secao {
+          font-size: 34px;
+      }
+
+
+      /* Projetos */
+
+      .grade-projetos {
+          grid-template-columns: 1fr;
+          padding-right: 0;
+      }
+
+
+      /* Estudos */
+
+      .estudos {
+          grid-template-columns: 1fr;
+          padding-right: 0;
+      }
+
+
+      /* Sobre */
+
       .sobre {
           grid-template-columns: 1fr;
+          gap: 30px;
       }
 
       .img-sobre {
           height: auto;
+          max-height: 500px;
+          border-radius: 50px;
       }
+
+
+      /* Contato */
+
+      .botoes-contato {
+          padding-right: 0;
+          flex-direction: column;
+      }
+
+      .botao-contato {
+          width: 100%;
+          justify-content: center;
+      }
+
+
+      /* Banner */
+
+      .banner {
+          width: 90%;
+          justify-content: space-between;
+      }
+
 
   }
